@@ -170,10 +170,10 @@ const Home = (props: HomePageProps) => {
 		<>
 			<Header />
 			{hero_banner && <HeroBanner {...hero_banner} />}
-			{subline && <Subline text={subline} />}
+			{/* {subline && <Subline text={subline} />} */}
 			{best_sellers && <ShopOurBestSellers {...best_sellers} />}
 			{features && <Features {...features} />}
-			{testimonials && <Testimonials {...testimonials} />}
+			{/* {testimonials && <Testimonials {...testimonials} />} */}
 			{how_does_it_work && <HowDoesItWork {...how_does_it_work} />}
 			<NeedHelp />
 			<Footer />

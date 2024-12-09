@@ -364,7 +364,7 @@ export default () => {
 											/>
 										</FlexboxItem>
 									</Flexbox>
-									<ResponsiveDiv mb="xxl">
+									{/* <ResponsiveDiv mb="xxl">
 										<Text mb="sm" color="mine-shaft" fontStyleGuide="body4">Select a product type <sup>*</sup></Text>
 										<RadioGroup
 											name="category"
@@ -383,7 +383,7 @@ export default () => {
 												</FlexboxItem>
 											</Flexbox>
 										</RadioGroup>
-									</ResponsiveDiv>
+									</ResponsiveDiv> */}
 									<Flexbox direction="row" justify="space-between" align="center" mb="sm">
 										<FlexboxItem colspan={24}>
 											<Textarea
