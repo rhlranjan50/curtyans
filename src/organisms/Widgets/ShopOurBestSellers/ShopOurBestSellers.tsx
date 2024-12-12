@@ -1,4 +1,4 @@
-import React from "react";
+//import React from "react";
 import { css } from "@emotion/react";
 
 import Text from "atoms/Text";
@@ -90,7 +90,7 @@ const productList = [
 
 const ProductItem = (props: ProductItemProps) => {
 	return (
-		<Link to={`/product/${props.sku_id}`} css={styles.productItemCardWrapper}>
+		<div css={styles.productItemCardWrapper}>
 			<ResponsiveDiv css={styles.productItemCard}>
 				<ResponsiveDiv css={styles.imageWrapper}>
 					<Image width="300" height="225" loading="lazy" aspect-ratio="1.5" src={props.media[0].url} />
@@ -98,27 +98,27 @@ const ProductItem = (props: ProductItemProps) => {
 				<ResponsiveDiv css={styles.contentWrapper}>
 					<Flexbox direction="column" justify="space-between" align="flex-start">
 						<FlexboxItem colspan={24} colspanXL={24} mb="xs">
-							<Text fontStyleGuide="heading7" color="mine-shaft" textWrap="pretty">{props.product_name}</Text>
+							<Text fontStyleGuide="heading7" color="mine-shaft" textWrap="pretty" align="center">{props.product_name}</Text>
 						</FlexboxItem>
-						<FlexboxItem colspan={24} colspanXL={24}>
+						{/* <FlexboxItem colspan={24} colspanXL={24}>
 							<Flexbox direction="row" justify="start" align="flex-end">
 								<Text as="span" fontStyleGuide="heading7" color="flamingo" align="center" textWrap="pretty">{`AED ${props.selling_price}`}</Text>
 								<Text as="p" fontStyleGuide="body5" color="mine-shaft" align="center" textWrap="pretty" ml="xs">{"onwards"}</Text>
 							</Flexbox>
-						</FlexboxItem>
+						</FlexboxItem> */}
 					</Flexbox>
 				</ResponsiveDiv>
 			</ResponsiveDiv>
 
-		</Link>
+		</div>
 	)
 }
 
 export default (props: ShopOurBestsellersProps) => {
 	return (
 		<WidgetContainer enableBackground>
-			<Text align="center" color="mine-shaft" fontStyleGuide="heading3" mb="xxl">{props.title}</Text>
-			<Text align="center" color="mine-shaft" fontStyleGuide="body4" mb="xxl">{props.sub_title}</Text>
+			<Text align="center" color="mine-shaft" fontStyleGuide="heading4" mb="xxl">{props.title}</Text>
+			{/* <Text align="center" color="mine-shaft" fontStyleGuide="body4" mb="xxl">{props.sub_title}</Text> */}
 			<Flexbox direction="row" justify="space-between" align="stretch">
 				{(props.entities || []).map((product, index) => (
 					<FlexboxItem key={`our-bestsellers-${index}-${product.product_name}`} colspan={12} colspanXL={6}>
@@ -126,9 +126,9 @@ export default (props: ShopOurBestsellersProps) => {
 					</FlexboxItem>
 				))}
 			</Flexbox>
-			<Flexbox direction="row" justify="center" align="center" mt="xxl">
+			{/* <Flexbox direction="row" justify="center" align="center" mt="xxl">
 				<Button type="primary" to="/book-visit-form">Book a Free Visit</Button>
-			</Flexbox>
+			</Flexbox> */}
 		</WidgetContainer>
 	)
 }

@@ -53,7 +53,6 @@ const FeatureItem = (props: FeatureItemProps) => {
 			<FlexboxItem colspan={24} colspanXL={11}>
 					<Text fontStyleGuide="heading6" color="mine-shaft" mb="xs">{props.title}</Text>
 					<Text fontStyleGuide="body4" color="mine-shaft" mb="xxl">{props.description}</Text>
-					<Button type="secondary" to="/book-visit-form">Book a Free Visit</Button>
 			</FlexboxItem>
 		</Flexbox>
 	)
